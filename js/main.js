@@ -1,11 +1,9 @@
 $(function(){
 
-  // $('.click').on('.modal__inner').toggleClass('modal__inner--active');
-
-   $('.click').click(function () {
+  $('.click').click(function () {
     $('.modal__inner').toggleClass('modal__inner--active');
      
-   });
+  });
 
 // Объявить переменную модального окна в текущей области видимости
 var modal = document.getElementById('myModal');
@@ -27,10 +25,6 @@ if (event.target == modal) {
 modal.style.display = 'none';
 }
 };
-  // $('.click').click(function () {
-  //   $('.zatemnenie').toggleClass('zatemnenie:target');
-  //  });
-
 
   $('.top-slider__inner').slick({
     dots: true,
