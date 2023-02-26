@@ -1,11 +1,43 @@
 $(function(){
 
+  // $('.click').on('.modal__inner').toggleClass('modal__inner--active');
+
+   $('.click').click(function () {
+    $('.modal__inner').toggleClass('modal__inner--active');
+     
+   });
+
+// Объявить переменную модального окна в текущей области видимости
+var modal = document.getElementById('myModal');
+// Переменная кнопки, открывающей модальное окно
+var btn = document.getElementById('myBtn');
+// Получение элемента <span>, который закрывает модальное окно
+var span = document.getElementsByClassName('close')[0];
+// Когда пользователь нажимает кнопку, открывается pop-up форма 
+btn.onclick = function() {
+modal.style.display = 'block';
+};
+// Когда пользователь нажимает кнопку (x) <span>, закрывается окно формы
+span.onclick = function() {
+modal.style.display = 'none';
+};
+// Когда пользователь нажимает в любое место вне формы, закрыть окно формы
+window.onclick = function(event) {
+if (event.target == modal) {
+modal.style.display = 'none';
+}
+};
+  // $('.click').click(function () {
+  //   $('.zatemnenie').toggleClass('zatemnenie:target');
+  //  });
+
+
   $('.top-slider__inner').slick({
     dots: true,
     arrows: false,
     fade: true,
     // autoplay: true,
-    autoplaySpeed: 2000
+    // autoplaySpeed: 2000
   });
    
 
@@ -14,42 +46,88 @@ $(function(){
     arrows: true,
     infinite: true,
     slidesToShow: 6,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 5,
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 450,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+  ],
     prevArrow: '<div class="arrow arrow--prev"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 12H5" stroke="#B2B2B2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 8L5 12L9 16" stroke="#B2B2B2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
     nextArrow: '<div class="arrow arrow--next"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 12H5" stroke="#B2B2B2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 8L5 12L9 16" stroke="#B2B2B2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
   });
 
   $('.reviews-slider__inner').slick({
     dots: true,
-    // arrows: true,
+    arrows: true,
     slidesToShow: 3,
-    // autoplay: true,
+    infinite: true,
+    autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [
+    {
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 1,
+        dots: false,
+      }
+    },
+  ],
     prevArrow: '<div class="arrow arrow--prev"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 12H5" stroke="#B2B2B2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 8L5 12L9 16" stroke="#B2B2B2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
     nextArrow: '<div class="arrow arrow--next"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 12H5" stroke="#B2B2B2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 8L5 12L9 16" stroke="#B2B2B2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
   });
-
-//  $(".menu__link, .header__link, .logo").on("click", function(event){
-//         event.preventDefault();
-//         var id = $(this).attr('href'),
-//         top = $(id).offset().top;
-//         $('.header__top').toggleClass('header__top--fixed');
-//         $('body,html').animate({scrollTop: top-82}, 3500);
-//     });
 
   $('.menu__button, .menu__link').on('click', function(){
     $('.header__top').toggleClass('header__top--active');
     $('body').toggleClass('lock');
   });
 
-  $('.menu__link, .header__link, .logo').on("click", function(event){
+  $('.menu__link, .header__link, .logo, .footer-top__link').on("click", function(event){
     event.preventDefault();
     const scrollAnchor = $(this).attr('href');
     let scrollPoint = $(scrollAnchor).offset().top;
 
     if(scrollAnchor === '#gallery') {
-      scrollPoint = scrollPoint - 65;
+      scrollPoint = scrollPoint - 135;
+    } 
+    if(scrollAnchor === '#reviews') {
+      scrollPoint = scrollPoint - 135;
+    } 
+    if(scrollAnchor === '#about') {
+      scrollPoint = scrollPoint - 135;
+    } 
+    if(scrollAnchor === '#news') {
+      scrollPoint = scrollPoint - 135;
+    } 
+    if(scrollAnchor === '#partners') {
+      scrollPoint = scrollPoint - 135;
     } 
 
     if(scrollAnchor === '#contacts') {
@@ -71,5 +149,3 @@ $(function(){
   });
 
 });
-
-var mixer = mixitup('.gallery__content');
