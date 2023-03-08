@@ -671,9 +671,9 @@ body {
   background-color: #C33C62;
 }
 
-.gallery__btn-link:hover::after {
+/* .gallery__btn-link:hover::after {
   transform: scale(1.4);
-}
+} */
 
 .advantages {
   position: relative;

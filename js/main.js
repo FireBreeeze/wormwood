@@ -30,8 +30,8 @@ modal.style.display = 'none';
     dots: true,
     arrows: false,
     fade: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000
+    autoplay: true,
+    autoplaySpeed: 2000
   });
    
 
@@ -59,12 +59,18 @@ modal.style.display = 'none';
       breakpoint: 700,
       settings: {
         slidesToShow: 3,
+        centerMode: true,
+        centerPadding: '20px',
+        arrows: false,
       }
     },
     {
       breakpoint: 450,
       settings: {
         slidesToShow: 2,
+        centerMode: true,
+        centerPadding: '20px',
+        arrows: false,
       }
     },
   ],
@@ -91,6 +97,16 @@ modal.style.display = 'none';
       settings: {
         slidesToShow: 1,
         dots: false,
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+        dots: false,
+        centerMode: true,
+        centerPadding: '20px',
+        arrows: false,
       }
     },
   ],
