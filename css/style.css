@@ -897,6 +897,10 @@ body {
   padding-left: 50px;
   margin-bottom: 20px;
   position: relative;
+      display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 65px;
 }
 
 .reviews-slider__box::before {
@@ -911,20 +915,19 @@ body {
 }
 
 .reviews-slider__box--1::before {
-  background-image: url(../images/reviews/photo2.jpg);
+  background-image: url(../images/reviews/photo1.jpg);
 }
 
 .reviews-slider__box--2::before {
-  background-image: url(../images/reviews/photo3.jpg);
+  background-image: url(../images/reviews/photo2.jpg);
 }
 
 .reviews-slider__box--3::before {
-  background-image: url(../images/reviews/photo1.jpg);
+  background-image: url(../images/reviews/photo3.jpg);
 }
 
 .reviews-slider__name {
   font-size: 18px;
-  margin-bottom: 20px;
 }
 
 .reviews-slider__date {
