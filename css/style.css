@@ -164,12 +164,14 @@ body {
   border: 1px solid #c43c62;
   color: #c43c62;
 }
+
 #close:hover,
-#price-action:hover{
+#price-action:hover {
   background-color: #FFFFFF;
-    border: 1px solid #c43c62;
-    color: #c43c62;
+  border: 1px solid #c43c62;
+  color: #c43c62;
 }
+
 .header {
   z-index: 1;
   color: #c43c62;
@@ -451,64 +453,67 @@ body {
   font-size: 16px;
   margin-bottom: 60px;
 }
- #zatemnenie {
-   background: rgba(102, 102, 102, 0.5);
-   /* width: 100%;
+
+#zatemnenie {
+  background: rgba(102, 102, 102, 0.5);
+  /* width: 100%;
    height: 100%; */
-   position: absolute;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   top: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
   /* top: 150px;
    left: 0; */
-   display: none;
- }
+  display: none;
+}
 
- #okno {
-   width: 800px;
-   height: 500px;
-   text-align: center;
-   padding: 15px;
-   border: 3px solid #c43c62;
-   border-radius: 10px;
-   color: #c43c62;
-   position: absolute;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   margin: auto;
-   background: #fff;
-   z-index: 100;
-   margin-top: 135px;
- }
+#okno {
+  width: 800px;
+  height: 500px;
+  text-align: center;
+  padding: 15px;
+  border: 3px solid #c43c62;
+  border-radius: 10px;
+  color: #c43c62;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: #fff;
+  z-index: 100;
+  margin-top: 135px;
+}
 
- #zatemnenie:target {
-   display: block;
- }
- #block{
+#zatemnenie:target {
+  display: block;
+}
+
+#block {
   font-size: 0;
   padding: 0;
   margin: 0;
- }
+}
 
- .close {
-   display: inline-block;
-   border: 1px solid #c43c62;
-   color: #c43c62;
-   padding: 0 12px;
-   margin: 10px;
-   text-decoration: none;
-   background: #f2f2f2;
-   font-size: 14pt;
-   cursor: pointer;
- }
+.close {
+  display: inline-block;
+  border: 1px solid #c43c62;
+  color: #c43c62;
+  padding: 0 12px;
+  margin: 10px;
+  text-decoration: none;
+  background: #f2f2f2;
+  font-size: 14pt;
+  cursor: pointer;
+}
 
- .close:hover {
-   background: #fff;
- }
- .btn-m{
+.close:hover {
+  background: #fff;
+}
+
+.btn-m {
   color: #fff;
   background-color: #C33C62;
   font-size: 24px;
@@ -516,7 +521,8 @@ body {
   width: 500px;
   border-radius: 50px;
   border: 1px solid transparent;
- }
+}
+
 .price {
   overflow: hidden;
 }
@@ -544,7 +550,7 @@ body {
 .price-input {
   padding: 15px;
   width: 600px;
-  
+
   background: #FFFFFF;
   border: 1px solid #C33C62;
   box-sizing: border-box;
@@ -897,10 +903,10 @@ body {
   padding-left: 50px;
   margin-bottom: 20px;
   position: relative;
-      display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 65px;
 }
 
 .reviews-slider__box::before {
@@ -1236,13 +1242,16 @@ body {
   border-radius: 40px;
   margin-bottom: 85px;
 }
-.modal__inner{
+
+.modal__inner {
   display: none;
 }
-.modal__inner--active{
+
+.modal__inner--active {
   display: block;
 }
-#close{
+
+#close {
   color: #fff;
   display: inline-block;
   border: 1px solid #c43c62;
@@ -1250,7 +1259,7 @@ body {
   text-decoration: none;
   background: #c43c62;
   font-size: 24px;
-    cursor: pointer;
+  cursor: pointer;
   position: absolute;
   bottom: 30px;
   right: 0;
@@ -1475,13 +1484,14 @@ body {
 }
 
 @media (max-width: 850px) {
-  #okno{
+  #okno {
     width: 90%;
     margin-left: 15px;
     margin-right: 15px;
     top: -132px;
   }
-  .top-slider__item{
+
+  .top-slider__item {
     height: 500px;
   }
 }
@@ -1542,10 +1552,12 @@ body {
     margin-right: 0;
     margin-bottom: 10px;
   }
-  .price-input{
+
+  .price-input {
     width: 97%;
   }
-  .btn-m{
+
+  .btn-m {
     width: 80%;
   }
 }
@@ -1578,18 +1590,21 @@ body {
   .advantages__item {
     margin: 0 25px;
   }
-        .top-slider__item {
-          height: 400px;
-        }
-    .top-slider::before{
-      display: none;
-    }
+
+  .top-slider__item {
+    height: 400px;
+  }
+
+  .top-slider::before {
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
   .top-slider__item {
-    background-size: 30%;
-    background-position: bottom right;
+    /* background-size: 30%; */
+    background-size: 0;
+    /* background-position: bottom right; */
   }
 
   .top-slider__text {
