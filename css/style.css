@@ -1602,8 +1602,9 @@ body {
 
 @media (max-width: 500px) {
   .top-slider__item {
+    /* background-size: 30%; */
     background-size: 0;
-    background-position: bottom right;
+    /* background-position: bottom right; */
   }
 
   .top-slider__text {
